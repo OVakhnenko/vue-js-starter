@@ -4,19 +4,18 @@
     <title>My first Vue app</title>
     <script src="https://unpkg.com/vue"></script>
 </head>
-<body>
 <div id="app-2">
   <span v-bind:title="message">
     Наведи курсор на меня пару секунд,
     чтобы увидеть динамически связанное значение title!
   </span>
-
 </div>
+
 <script>
-    var app = new Vue({
-        el: '#app',
+    var app2 = new Vue({
+        el: '#app-2',
         data: {
-            message: 'Hello Vue!'
+            message: 'Вы загрузили эту страницу: ' + new Date().toLocaleString()
         }
     })
 </script>
