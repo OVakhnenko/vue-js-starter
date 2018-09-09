@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My first Vue app</title>
+    <script src="https://unpkg.com/vue"></script>
+</head>
+<div id="app-7">
+    <ol>
+        <!--
+          Теперь мы можем передать каждому компоненту todo-item объект
+          с информацией о задаче, который будет динамически меняться.
+          Мы также определяем для каждого компонента "key",
+          значение которого мы разберём далее в руководстве.
+        -->
+        <todo-item
+                v-for="item in groceryList"
+                v-bind:todo="item"
+                v-bind:key="item.id">
+        </todo-item>
+    </ol>
+</div>
+
+<script>
+    var app6 = new Vue({
+        el: '#app-6',
+        data: {
+            message: 'Привет, Vue!'
+        }
+    })
+</script>
+</body>
+</html>
